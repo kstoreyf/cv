@@ -1,3 +1,7 @@
+# my additions
+.DS_store
+.vscode
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
