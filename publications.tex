@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+%\usepackage[german]{babel}
+\usepackage[LabelsAligned,NoDate]{currvita}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{mulberry}{HTML}{A93C93}
+
+\hypersetup{
+colorlinks=true,
+linkcolor=mulberry,
+urlcolor=mulberry,
+}
+
+\newcommand{\papertitle}[1]{\emph{#1}}
+\newcommand{\arXiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
+
+\newenvironment{cvlist_tight}[1]
+{\begin{cvlist}{#1}
+\setlength{\itemsep}{3pt}
+\setlength{\parskip}{2pt} }
+{\end{cvlist} }
+
+\begin{document}
+
+\begin{cv}{\huge{Publications}\vspace{0.5ex}\\ \large{Kate Storey-Fisher}}
+\setlength{\cvlabelwidth}{8em} % was 37mm
+
+
+\vspace{1ex}
+
+\begin{cvlist_tight}{Published and in review (first author)}
+\input{sections/pubs_firstauthor}
+\end{cvlist_tight}
+
+\begin{cvlist_tight}{Published and in review (co-author)}
+\input{sections/pubs_coauthor}
+\end{cvlist_tight}
+
+\begin{cvlist_tight}{In preparation}
+%\item[]
+\input{sections/pubs_inprep}
+\end{cvlist_tight}
+
+\end{cv}
+
+\end{document}
